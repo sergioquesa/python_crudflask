@@ -73,6 +73,6 @@ def listall():
     data=cone.DevolverDatos()
     cone.CerrarBasededatos()
     return render_template('index.html',datos=data)
-    
+
 if __name__=="__main__":
     app.run()
