@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/view">List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/all">Add</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Update</a>
+      </li>
+    </ul>
+    <h1>Listado de Alumnos</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">num</th>
+            <th scope="col">nombre</th>
+            <th scope="col">apellido</th>
+            </tr>
+            </thead>
+        <tbody>
+            {% for dato in datos %}
+                <tr>
+                    <td>
+                        {{dato[0]}}
+                    </td>
+                  <td>
+                      <input type="text" value="{{dato[1]}}" name="nombre">
+                  </td>
+                  <td>
+                      <input type="text" value="{{dato[2]}}" name="apellido">
+                  </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </body>
+</html>
